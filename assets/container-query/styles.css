@@ -1,0 +1,66 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body {
+	background-color:beige;
+}
+
+section h1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+}
+
+section p.description {
+	margin: 15px;
+}
+
+.card {
+	container-type: inline-size;
+	margin: 10px;
+	padding: 20px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: black;
+
+	background-color:aquamarine;
+	color: white;
+}
+
+.card[data-type="narrow"] {
+	max-width: 350px;
+}
+
+.card[data-type="medium"] {
+	max-width: 600px;
+}
+
+.card[data-type="wide"] {
+	max-width: 850px;
+}
+
+@container (min-width: 375px) {
+	/* .card {
+		background-color: orange;
+	} */
+
+	.card h2, p{
+		color: red;
+		font-size: 10qw;
+	}
+}
+
+@container (min-width: 625px) {
+	/* .card {
+		background-color: purple;
+	} */
+
+	.card h2, p {
+		color: blue;
+	}
+}
