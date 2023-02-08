@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/**************/
+/* LIGHT MODE */
+/**************/
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --achtergrond-kleur: rgb(255, 255, 255);
+    --tekst-kleur: black;
+    --header-kleur-gradient: linear-gradient(
+      68deg,
+      rgba(188, 248, 255, 1) 0%,
+      rgba(206, 206, 246, 1) 51%,
+      rgba(41, 137, 255, 1) 100%
+    );
+  }
+
+  :has(input:checked)   body  {
+    background-color:  rgb(25, 25, 53);
+    color: white;
+  } 
+
+  :has(input:checked) header {
+    background: linear-gradient(
+      34deg,
+      rgba(62, 57, 149, 1) 0%,
+      rgba(81, 81, 140, 1) 47%,
+      rgba(41, 137, 255, 1) 100%
+    );
+  }
+
+  header img,
+  main img {
+    width: 8em;
+    content: url(../images/night-sky.jpg);
+    /* https://unsplash.com/photos/rCbdp8VCYhQ */
+  }
+
+  main img {
+    width: 100%;
+  }
+
+  h1 {
+    font-family: 'highgate', sans-serif;
+  }
+
+  a {
+    background-color:  rgb(25, 25, 53);
+     color:rgb(185, 216, 255); 
+} 
+   
+  }
+
+
+
+
+
+/*************/
+/* DARK MODE */
+/*************/
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --achtergrond-kleur: rgb(25, 25, 53);
+    --tekst-kleur: rgb(255, 255, 255);
+    --header-kleur-gradient: linear-gradient(
+      34deg,
+      rgba(62, 57, 149, 1) 0%,
+      rgba(81, 81, 140, 1) 47%,
+      rgba(41, 137, 255, 1) 100%
+    );
+  }
+
+  /* Als je op de checkbox klikt, dan verander de kleur van  de licht modus */
+  :has(input:checked)   body  {
+    background-color: rgb(255, 255, 255);
+    color: black;
+  } 
+
+  :has(input:checked) header {
+    background: linear-gradient(
+        68deg,
+        rgba(188, 248, 255, 1) 0%,
+        rgba(206, 206, 246, 1) 51%,
+        rgba(41, 137, 255, 1) 100%
+      );
+  }
+  /* Omdat het donker is dan wordt de afbeeldingen groter */
+
+  header img,
+  main img {
+    width: 15em;
+    content: url(../images/image-sky.jpg);
+  }
+
+  h1 {
+    font-family: "input-serif", serif;
+    font-weight: bold;
+  }
+
+  a {
+    background-color: rgb(185, 216, 255);
+    color: rgb(25, 25, 53);
+  }
+}
+
+/* In het dark mode bij kleine schermen en grote schermen heb je een grote 
+afbeelding */
+
+@media (prefers-color-scheme: dark) and (max-width: 32em) {
+  main img {
+    width: 100%;
+  }
+}
+
+@media (prefers-color-scheme: dark) and (min-width: 32em) {
+  main img {
+    width: 100%;
+  }
+}
+
+
+
+/**************************/
+/* /* Voor beide modus */
+/**************************/
+
+body {
+  background-color: var(--achtergrond-kleur);
+  color: var(--tekst-kleur);
+}
+
+main {
+  padding: 1em;
+}
+
+header {
+  background: var(--header-kleur-gradient);
+  height: 40vh;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  gap: 5em;
+  align-items: center;
+}
+
+article {
+    display: grid;
+}
+img {
+  border-radius: 1em;
+}
+
+h1 {
+  font-size: 2vw;
+}
+
+p {
+  line-height: 1.8;
+  padding: 1em;
+
+  font-family: interstate, sans-serif;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+a {
+    text-decoration: none;
+    padding: 1em;
+    border-radius: .5em;
+   font-family: 'interstate', sans-serif;
+   font-weight: bold;
+   place-self: center;
+   margin: 1em;
+}
+
+/******************/
+/* SCHERM GROOTTE */
+/******************/
+
+@media (max-width: 32em) {
+  header {
+    gap: 1em;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 32em) {
+  main {
+    margin: 5% auto;
+    width: 50%;
+  }
+}
+
+/* body:has(input:checked)   body  {
+    background-color: rgb(255, 255, 255);
+    color: black;
+  } 
+
+  body:has(input:checked) header {
+    background: linear-gradient(
+        68deg,
+        rgba(188, 248, 255, 1) 0%,
+        rgba(206, 206, 246, 1) 51%,
+        rgba(41, 137, 255, 1) 100%
+      );
+  } */
+  
