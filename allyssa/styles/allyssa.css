@@ -5,6 +5,7 @@
 
 body {
   margin: 1em;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 section:nth-of-type(1){
@@ -17,13 +18,13 @@ section:nth-of-type(1){
 section:nth-of-type(1) h1 {
   font-size: 50px;
   margin: 0;
-  writing-mode: vertical-lr;
-  text-align: center;
-  line-height: 0.9;
+  line-height: 1;
 }
 
 section:nth-of-type(1) h1:nth-of-type(1) {
   transform: rotate(180deg);
+   writing-mode: vertical-lr;
+  text-align: center;
 }
 
 section:nth-of-type(2) div{
