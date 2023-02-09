@@ -6,7 +6,7 @@
 
 
 body {
-    background: dodgerblue;
+    background: rgb(204, 229, 255);
     display: grid;
     align-items: center;
     place-items: center;
@@ -34,4 +34,16 @@ li {
 
 a {
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+a:hover {
+    color: dodgerblue;
+    
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
