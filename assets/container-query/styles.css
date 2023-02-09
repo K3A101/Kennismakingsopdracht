@@ -33,15 +33,15 @@ section p.description {
 }
 
 .card[data-type="narrow"] {
-	max-width: 350px;
+	max-width: 550px;
 }
 
 .card[data-type="medium"] {
-	max-width: 600px;
+	max-width: 850px;
 }
 
 .card[data-type="wide"] {
-	max-width: 850px;
+	max-width: 1000px;
 }
 
 @container (min-width: 375px) {
