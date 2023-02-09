@@ -8,6 +8,10 @@ body {
 	background-color:beige;
 }
 
+section {
+	margin-top: 30px;
+}
+
 section h1 {
 	display: flex;
 	justify-content: center;
@@ -19,6 +23,20 @@ section p.description {
 	margin: 15px;
 }
 
+div.aside p {
+	width: 50%;
+}
+
+div.aside aside {
+	container-type: inline-size;
+	width: 40%;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+}
+
 .card {
 	container-type: inline-size;
 	margin: 10px;
@@ -27,9 +45,18 @@ section p.description {
 	border-width: 1px;
 	border-radius: 15px;
 	border-color: black;
-
 	background-color:aquamarine;
 	color: white;
+}
+
+.aside {
+	margin: 10px;
+	padding: 15px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 15px;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .card[data-type="narrow"] {
@@ -44,23 +71,22 @@ section p.description {
 	max-width: 1000px;
 }
 
-@container (min-width: 575px) {
-	/* .card {
-		background-color: orange;
-	} */
-
-	.card h2, p{
+@container (max-width: 300px) {
+	.aside aside p {
 		color: red;
-		font-size: 10qw;
+		font-size: 100px;
+		font-weight: bold;
+	}
+}
+
+@container (min-width: 475px) {
+	.card p {
+		color: red;
 	}
 }
 
 @container (min-width: 625px) {
-	/* .card {
-		background-color: purple;
-	} */
-
-	.card h2, p {
+	.card p {
 		color: blue;
 	}
 }
