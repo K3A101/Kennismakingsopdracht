@@ -44,7 +44,7 @@ section p.description {
 	max-width: 1000px;
 }
 
-@container (min-width: 375px) {
+@container (min-width: 575px) {
 	/* .card {
 		background-color: orange;
 	} */
